@@ -1,4 +1,4 @@
-# android-multi-modules
+# Android Multi Modules
 Learn how to split an Android app into multi modules
 
 ## License
