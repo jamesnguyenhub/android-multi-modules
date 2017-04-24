@@ -1,0 +1,81 @@
+ext {
+  // Application
+  applicationId = "com.tuyenmonkey.senple"
+  appVersionName = "2.0.0"
+  appVersionCode = 2
+
+  // Android
+  androidBuildToolVersion = "25.0.2"
+  androidMinSdkVersion = 14
+  androidTargetSdkVersion = 25
+  androidCompileSdkVersion = 25
+  testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+
+  // Libraries
+  supportLibraryVersion = '25.1.0'
+  daggerVersion = '2.8'
+  butterKnifeVersion = '8.5.1'
+  rxJavaVersion = '2.0.2'
+  rxAndroidVersion = '2.0.1'
+  javaxAnnotationVersion = '1.0'
+  rxJavaAdapterVersion = '1.0.0'
+  retrofitVersion = '2.1.0'
+  okhttpVersion = '3.6.0'
+  frescoVersion = '1.1.0'
+  firebaseVersion = '10.2.0'
+  junitVersion = '4.12'
+  realmVersion = '0.84.1'
+  noAdapterVersion = '2.0.0'
+  jsoupVersion = '1.10.2'
+  textDecoratorVersion = '1.0.0'
+  playServicesVersion = '10.2.0'
+  multidexVersion = '1.0.1'
+
+  // Testing
+
+  // Development
+  leakCanaryVersion = '1.5'
+
+  libraries = [
+      supportAppCompat: "com.android.support:appcompat-v7:${supportLibraryVersion}",
+      supportRecyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+      supportCardView: "com.android.support:cardview-v7:${supportLibraryVersion}",
+      supportDesign: "com.android.support:design:${supportLibraryVersion}",
+
+      butterknife: "com.jakewharton:butterknife:${butterKnifeVersion}",
+      butterknifeCompiler: "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+
+      rxJava: "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+      rxAndroid: "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+
+      dagger: "com.google.dagger:dagger:${daggerVersion}",
+      daggerCompiler: "com.google.dagger:dagger-compiler:${daggerVersion}",
+      javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+
+      retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+      gsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+      rxJavaAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${rxJavaAdapterVersion}",
+      okhttp: "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+      loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}",
+
+      playServicesAnalytics: "com.google.android.gms:play-services-analytics:${playServicesVersion}",
+
+      firebaseMessaging: "com.google.firebase:firebase-messaging:${firebaseVersion}",
+      firebaseAds: "com.google.firebase:firebase-ads:${firebaseVersion}",
+
+      fresco: "com.facebook.fresco:fresco:${frescoVersion}",
+
+      leakCanaryDebug: "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+      leakCanaryRelease: "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+      leakCanaryTest: "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+
+      realm: "io.realm:realm-android:${realmVersion}",
+      noAdapter: "vn.tiki.noadapter:noadapter:${noAdapterVersion}",
+      textDecorator: "com.tuyenmonkey:text-decorator:${textDecoratorVersion}",
+      multidex: "com.android.support:multidex:${multidexVersion}",
+
+      jsoup: "org.jsoup:jsoup:${jsoupVersion}",
+
+      junit: "junit:junit:${junitVersion}"
+  ]
+}
