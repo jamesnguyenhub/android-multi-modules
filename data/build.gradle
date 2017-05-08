@@ -1,17 +1,19 @@
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion 25
-  buildToolsVersion "25.0.2"
+  def globalConfiguration = rootProject.extensions.getByName("ext")
+
+  compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+  buildToolsVersion globalConfiguration.getAt("androidBuildToolVersion")
 
   defaultConfig {
-    minSdkVersion 14
-    targetSdkVersion 25
-    versionCode 1
-    versionName "1.0"
-
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
+    targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
+    versionCode globalConfiguration.getAt("appVersionCode")
+    versionName globalConfiguration.getAt("appVersionName")
+    testInstrumentationRunner globalConfiguration.getAt("testInstrumentationRunner")
   }
+
   buildTypes {
     release {
       minifyEnabled false
@@ -21,10 +23,10 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
-  compile 'com.android.support:appcompat-v7:25.3.1'
+  compile libraries.rxJava
+  compile libraries.rxAndroid
+
+  compile libraries.retrofit
+  compile libraries.gsonConverter
   testCompile 'junit:junit:4.12'
 }

@@ -3,16 +3,16 @@ apply plugin: 'com.android.application'
 android {
   def globalConfiguration = rootProject.extensions.getByName("ext")
 
-  compileSdkVersion 25
-  buildToolsVersion "25.0.2"
+  compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+  buildToolsVersion globalConfiguration.getAt("androidBuildToolVersion")
 
   defaultConfig {
-    applicationId "com.tuyenmonkey.androidmultimodules"
-    minSdkVersion 14
-    targetSdkVersion 25
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    applicationId globalConfiguration.getAt("applicationId")
+    minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
+    targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
+    versionCode globalConfiguration.getAt("appVersionCode")
+    versionName globalConfiguration.getAt("appVersionName")
+    testInstrumentationRunner globalConfiguration.getAt("testInstrumentationRunner")
   }
 
   buildTypes {
@@ -27,9 +27,11 @@ dependencies {
   def libraries = rootProject.ext.libraries
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
+
+  compile libraries.supportAppCompat
+  testCompile libraries.junit
+
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-  compile 'com.android.support:appcompat-v7:25.3.1'
-  testCompile 'junit:junit:4.12'
 }
