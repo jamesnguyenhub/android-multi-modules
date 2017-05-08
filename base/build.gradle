@@ -25,10 +25,5 @@ dependencies {
   def libraries = rootProject.ext.libraries
 
   compile libraries.supportAppCompat
-  compile libraries.rxJava
-  compile libraries.rxAndroid
-
-  compile libraries.retrofit
-  compile libraries.gsonConverter
   testCompile libraries.junit
 }
