@@ -25,5 +25,7 @@ dependencies {
   def libraries = rootProject.ext.libraries
 
   compile libraries.supportAppCompat
+  compile libraries.butterknife
+  annotationProcessor libraries.butterknifeCompiler
   testCompile libraries.junit
 }
