@@ -23,6 +23,7 @@ android {
 }
 
 dependencies {
+  compile libraries.supportAppCompat
   compile libraries.rxJava
   compile libraries.rxAndroid
 
