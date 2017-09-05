@@ -36,6 +36,10 @@ ext {
   // Development
   leakCanaryVersion = '1.5'
 
+  // Micro Modules
+  common = ':common'
+  mvp = ':mvp'
+
   libraries = [
       supportAppCompat: "com.android.support:appcompat-v7:${supportLibraryVersion}",
       supportRecyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
