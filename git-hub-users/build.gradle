@@ -44,7 +44,7 @@ dependencies {
 
   compile libs.common
   compile libs.data
-  compile libs.gitHubUsers
+  compile libs.mvp
 
   compile libs.supportAppCompat
 

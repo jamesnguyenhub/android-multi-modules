@@ -23,6 +23,7 @@ dependencies {
 
   compile libs.retrofit
   compile libs.retrofitGsonConverter
+  compile libs.rxJavaAdapter
 
   compile libs.rxJava
   compile libs.rxAndroid

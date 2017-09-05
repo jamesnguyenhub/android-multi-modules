@@ -2,6 +2,8 @@ package com.tuyenmonkey.androidmultimodules.di.module;
 
 import android.app.Application;
 import android.content.Context;
+import com.tuyenmonkey.amm.common.base.AppConfig;
+import com.tuyenmonkey.androidmultimodules.AppConfigImpl;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
@@ -28,5 +30,11 @@ public class AppModule {
   @Singleton
   Context provideApplicationContext() {
     return application;
+  }
+
+  @Provides
+  @Singleton
+  AppConfig provideAppConfig() {
+    return new AppConfigImpl();
   }
 }
