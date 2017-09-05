@@ -18,9 +18,5 @@ dependencies {
   def libs = rootProject.ext.libraries
 
   compile libs.supportAppCompat
-
-  compile libs.dagger
-  annotationProcessor libs.daggerCompiler
-
   testCompile libs.junit
 }
