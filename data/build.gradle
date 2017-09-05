@@ -17,7 +17,12 @@ android {
 dependencies {
   def libs = rootProject.ext.libraries
 
+  compile libs.common
+
   compile libs.supportAppCompat
+
+  compile libs.retrofit
+  compile libs.retrofitGsonConverter
 
   compile libs.rxJava
   compile libs.rxAndroid

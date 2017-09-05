@@ -61,7 +61,7 @@ ext {
       javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
 
       retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-      gsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+      retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
       rxJavaAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${rxJavaAdapterVersion}",
       okhttp: "com.squareup.okhttp3:okhttp:${okhttpVersion}",
       loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}",
