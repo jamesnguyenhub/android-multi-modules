@@ -18,5 +18,9 @@ dependencies {
   def libs = rootProject.ext.libraries
 
   compile libs.supportAppCompat
+
+  compile libs.rxJava
+  compile libs.rxAndroid
+
   testCompile libs.junit
 }

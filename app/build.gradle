@@ -16,9 +16,25 @@ android {
   }
 
   buildTypes {
+    debug {
+      debuggable true
+    }
+
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  productFlavors {
+    dev {
+      applicationIdSuffix ".dev"
+      versionNameSuffix "-DEV"
+      buildConfigField("String", "GIT_HUB_API", "https://api.github.com/")
+    }
+
+    prod {
+      buildConfigField("String", "GIT_HUB_API", "https://api.github.com/")
     }
   }
 }
