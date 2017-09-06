@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+  def globalConfig = rootProject.ext
+
+  compileSdkVersion globalConfig.androidCompileSdkVersion
+  buildToolsVersion globalConfig.androidBuildToolVersion
+
+  defaultConfig {
+    minSdkVersion globalConfig.androidMinSdkVersion
+    targetSdkVersion globalConfig.androidTargetSdkVersion
+    versionCode 1
+    versionName "1.0"
+  }
+}
+
+dependencies {
+  def libs = rootProject.ext.libraries
+
+  compile libs.common
+  compile libs.data
+  compile libs.mvp
+
+  compile libs.supportAppCompat
+
+  compile libs.dagger
+  annotationProcessor libs.daggerCompiler
+
+  testCompile libs.junit
+}

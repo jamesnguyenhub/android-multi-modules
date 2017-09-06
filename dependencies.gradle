@@ -41,7 +41,7 @@ ext {
       common: project(':common'),
       data: project(':data'),
       mvp: project(':mvp'),
-      gitHubUsers: project(':git-hub-users'),
+      userList: project(':userlist'),
 
       supportAppCompat: "com.android.support:appcompat-v7:${supportLibraryVersion}",
       supportRecyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",

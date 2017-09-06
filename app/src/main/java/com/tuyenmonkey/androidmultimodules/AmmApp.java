@@ -24,6 +24,8 @@ public class AmmApp extends Application {
         .appModule(new AppModule(this))
         .dataModule(new DataModule(BuildConfig.DEBUG))
         .build();
+
+    appComponent.inject(this);
   }
 
   public AppComponent getAppComponent() {

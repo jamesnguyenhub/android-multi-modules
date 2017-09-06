@@ -1,6 +1,8 @@
 package com.tuyenmonkey.androidmultimodules.di.component;
 
 import com.tuyenmonkey.amm.data.DataModule;
+import com.tuyenmonkey.amm.userlist.UsersComponent;
+import com.tuyenmonkey.amm.userlist.UsersModule;
 import com.tuyenmonkey.androidmultimodules.AmmApp;
 import com.tuyenmonkey.androidmultimodules.di.module.AppModule;
 import dagger.Component;
@@ -17,4 +19,5 @@ import javax.inject.Singleton;
 public interface AppComponent {
   void inject(AmmApp ammApp);
 
+  UsersComponent plus(UsersModule usersModule);
 }

@@ -1,4 +1,4 @@
-package com.tuyenmonkey.amm.githubusers;
+package com.tuyenmonkey.amm.userlist;
 
 import org.junit.Test;
 
