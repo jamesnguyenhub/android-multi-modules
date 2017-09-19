@@ -42,6 +42,7 @@ ext {
       data: project(':data'),
       mvp: project(':mvp'),
       userList: project(':userlist'),
+      resources: project(':resources'),
 
       supportAppCompat: "com.android.support:appcompat-v7:${supportLibraryVersion}",
       supportRecyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",

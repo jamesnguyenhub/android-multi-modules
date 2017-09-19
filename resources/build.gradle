@@ -17,8 +17,6 @@ android {
 dependencies {
   def libs = rootProject.ext.libraries
 
-  compile libs.resources
-
   compile libs.supportAppCompat
 
   compile libs.dagger
