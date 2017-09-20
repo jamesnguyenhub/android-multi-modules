@@ -63,6 +63,7 @@ ext {
       daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:${daggerVersion}",
       javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
 
+      gson: "com.google.code.gson:gson:2.8.0",
       retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}",
       retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
       rxJavaAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${rxJavaAdapterVersion}",

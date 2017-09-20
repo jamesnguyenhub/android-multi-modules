@@ -17,16 +17,20 @@ android {
 dependencies {
   def libs = rootProject.ext.libraries
 
-  compile libs.common
+  implementation libs.common
 
-  compile libs.supportAppCompat
+  implementation libs.supportAppCompat
 
-  compile libs.retrofit
-  compile libs.retrofitGsonConverter
-  compile libs.rxJavaAdapter
+  implementation libs.gson
+  implementation libs.retrofit
+  implementation libs.retrofitGsonConverter
+  implementation libs.rxJavaAdapter
 
-  compile libs.rxJava
-  compile libs.rxAndroid
+  implementation libs.rxJava
+  implementation libs.rxAndroid
 
-  testCompile libs.junit
+  implementation libs.dagger
+  annotationProcessor libs.daggerCompiler
+
+  testImplementation libs.junit
 }

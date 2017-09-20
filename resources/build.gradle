@@ -17,10 +17,10 @@ android {
 dependencies {
   def libs = rootProject.ext.libraries
 
-  compile libs.supportAppCompat
+  implementation libs.supportAppCompat
 
-  compile libs.dagger
+  implementation libs.dagger
   annotationProcessor libs.daggerCompiler
 
-  testCompile libs.junit
+  testImplementation libs.junit
 }

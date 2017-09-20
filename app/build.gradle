@@ -26,14 +26,18 @@ android {
     }
   }
 
+  flavorDimensions "default"
+
   productFlavors {
     dev {
+      dimension "default"
       applicationIdSuffix ".dev"
       versionNameSuffix "-DEV"
       buildConfigField("String", "GIT_HUB_BASE_URL", '"https://api.github.com/"')
     }
 
     prod {
+      dimension "default"
       buildConfigField("String", "GIT_HUB_BASE_URL", '"https://api.github.com/"')
     }
   }
@@ -42,18 +46,21 @@ android {
 dependencies {
   def libs = rootProject.ext.libraries
 
-  compile libs.common
-  compile libs.data
-  compile libs.userList
+  implementation libs.common
+  implementation libs.data
+  implementation libs.userList
+  implementation libs.mvp
 
-  compile libs.supportAppCompat
+  implementation libs.supportAppCompat
 
-  compile libs.dagger
+  implementation libs.okhttp
+  implementation libs.gson
+  implementation libs.dagger
   annotationProcessor libs.daggerCompiler
 
-  testCompile libs.junit
+  testImplementation libs.junit
 
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+  androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
 }

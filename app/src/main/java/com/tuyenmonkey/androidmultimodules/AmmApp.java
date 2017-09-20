@@ -5,7 +5,6 @@ import com.tuyenmonkey.amm.common.base.BaseApp;
 import com.tuyenmonkey.amm.common.dagger.DaggerHelper;
 import com.tuyenmonkey.amm.data.DataModule;
 import com.tuyenmonkey.androidmultimodules.di.component.AppComponent;
-import com.tuyenmonkey.androidmultimodules.di.component.DaggerAppComponent;
 import com.tuyenmonkey.androidmultimodules.di.module.AppModule;
 
 /**
@@ -22,10 +21,10 @@ public class AmmApp extends BaseApp {
   }
 
   private void setupAppComponent() {
-    appComponent = DaggerAppComponent.builder()
-        .appModule(new AppModule(this))
-        .dataModule(new DataModule(BuildConfig.DEBUG))
-        .build();
+//    appComponent = DaggerAppComponent.builder()
+//        .appModule(new AppModule(this))
+//        .dataModule(new DataModule(BuildConfig.DEBUG))
+//        .build();
   }
 
   public AppComponent getAppComponent() {

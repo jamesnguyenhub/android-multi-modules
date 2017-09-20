@@ -17,6 +17,6 @@ android {
 dependencies {
   def libs = rootProject.ext.libraries
 
-  compile libs.supportAppCompat
-  testCompile libs.junit
+  implementation libs.supportAppCompat
+  testImplementation libs.junit
 }
